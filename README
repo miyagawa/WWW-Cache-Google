@@ -39,7 +39,18 @@ AUTHOR
     This library is free software; you can redistribute it and/or modify it
     under the same terms as Perl itself.
 
+    It comes WIHTOUT WARRANTY OF ANY KIND.
+
 SEE ALSO
     the WWW::Cache::Google::Imode manpage, the URI manpage, the URI::Escape
     manpage, the LWP::Simple manpage, http;//www.google.com/
+
+Revision history for Perl extension WWW::Cache::Google.
+
+0.02  Mon Jun 25 19:34:26 JST 2001
+	* Added WWW::Cache::Google::Imode
+	- removed functions
+
+0.01  Fri May 18 20:11:49 2001
+	- original version; created by h2xs 1.19
 

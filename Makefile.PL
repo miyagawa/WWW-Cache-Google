@@ -7,5 +7,6 @@ WriteMakefile(
     'PREREQ_PM' => {
 	'URI' => 0,
 	'URI::Escape' => 0,
+	'LWP::Simple' => 0,
     },
 );
