@@ -2,7 +2,7 @@ package WWW::Cache::Google;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = '0.02';
+$VERSION = 0.03;
 
 use URI;
 use URI::Escape;
@@ -47,6 +47,8 @@ sub fetch {
     return LWP::Simple::get($self->cache->as_string);
 }
 
+sub DESTROY { }
+
 use vars qw($AUTOLOAD);
 sub AUTOLOAD {
     my $self = shift;
@@ -74,7 +76,7 @@ WWW::Cache::Google - URI class for Google cache
 
 =head1 DESCRIPTION
 
-404 Not Found. But wait ... there's a google cache!
+Oops, 404 Not Found. But wait ... there might be a google cache!
 
 WWW::Cache::Google provides an easy way conversion from an URL to
 Google cache URL.

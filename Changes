@@ -1,5 +1,9 @@
 Revision history for Perl extension WWW::Cache::Google.
 
+0.03  Sun Mar 24 20:30:28 JST 2002
+	- Fixed problem with AUTOLOAD and DESTROY
+	  (Thanks to Jonathan Leto <jonathan@leto.net>)
+
 0.02  Mon Jun 25 19:34:26 JST 2001
 	* Added WWW::Cache::Google::Imode
 	- removed functions

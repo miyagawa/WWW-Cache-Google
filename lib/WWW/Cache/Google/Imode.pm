@@ -2,7 +2,7 @@ package WWW::Cache::Google::Imode;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = '0.01';
+$VERSION = 0.03;
 
 require WWW::Cache::Google;
 use base qw(WWW::Cache::Google);
