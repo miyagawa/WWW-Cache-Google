@@ -115,6 +115,6 @@ it under the same terms as Perl itself.
 
 =head1 SEE ALSO
 
-L<URI>, L<URI::Escape>, L<LWP::Simple>, http;//www.google.com/
+L<WWW::Cache::Google::Imode>, L<URI>, L<URI::Escape>, L<LWP::Simple>, http;//www.google.com/
 
 =cut

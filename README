@@ -4,22 +4,34 @@ NAME
 SYNOPSIS
       use WWW::Cache::Google;
 
-      # OO decorator way
-      $cache = WWW::Cache::Google->new(URI->new('http://www.yahoo.com/'));
+      $cache = WWW::Cache::Google->new('http://www.yahoo.com/');
 
-      print $cache->as_string; # cache URL
-      print $cache; # overloaded
-
-      $html = $cache->fetch; # fetches via LWP::Simple
-
-      # functional way
-      use WWW::Cache::Google qw(url2google get_google_cache);
-      $cache_url  = url2google('http://www.yahoo.com/');
-      $cache_html = get_google_cache('http://www.yahoo.com');
+      $url  = $cache->as_string;    # cache URL
+      $html = $cache->fetch;        # fetches via LWP::Simple
 
 DESCRIPTION
+    404 Not Found. But wait ... there's a google cache!
+
     WWW::Cache::Google provides an easy way conversion from an URL to Google
     cache URL.
+
+METHODS
+    $cache = WWW::Cache::Google->new($url);
+        constructs WWW::Cache::Google instance.
+
+    $orig_uri = $cache->orig;
+        returns original URL as URI instance.
+
+    $cache_uri = $cache->cache;
+        returns Google cache URL as URI instance.
+
+    $html = $cache->fetch;
+        gets HTML contents of Google cache. Requires LWP::Simple.
+
+    $url_str = $cache->as_string;
+        returns Google cache's URL as string. Every method defined in URI
+        class is autoloaded through $cache->cache. See the URI manpage for
+        details.
 
 AUTHOR
     Tatsuhiko Miyagawa <miyagawa@bulknews.net>
@@ -28,6 +40,6 @@ AUTHOR
     under the same terms as Perl itself.
 
 SEE ALSO
-    the URI manpage, the URI::Escape manpage, the LWP::Simple manpage,
-    http;//www.google.com/
+    the WWW::Cache::Google::Imode manpage, the URI manpage, the URI::Escape
+    manpage, the LWP::Simple manpage, http;//www.google.com/
 
