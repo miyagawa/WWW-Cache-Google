@@ -31,7 +31,6 @@ WWW::Cache::Google::Imode - URI class for Google proxy on i-mode
 
   use WWW::Cache::Google::Imode;
 
-  # OO decorator way
   $cache = WWW::Cache::Google::Imode->new('http://www.yahoo.com/');
 
   $url  = $cache->as_string;	# cache URL
@@ -55,7 +54,7 @@ Tatsuhiko Miyagawa <miyagawa@bulknews.net>
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
 
-It comes WIHTOUT WARRANTY OF ANY KIND. 
+It comes WITHOUT WARRANTY OF ANY KIND. 
 
 =head1 SEE ALSO
 
