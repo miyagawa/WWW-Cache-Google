@@ -4,4 +4,8 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
     'NAME'	=> 'WWW::Cache::Google',
     'VERSION_FROM' => 'lib/WWW/Cache/Google.pm', # finds $VERSION
+    'PREREQ_PM' => {
+	URI => 0,
+	'URI::Escape' => 0,
+    },
 );
