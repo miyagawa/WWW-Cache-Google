@@ -1,0 +1,33 @@
+NAME
+    WWW::Cache::Google - URI class for Google cache
+
+SYNOPSIS
+      use WWW::Cache::Google;
+
+      # OO decorator way
+      $cache = WWW::Cache::Google->new(URI->new('http://www.yahoo.com/'));
+
+      print $cache->as_string; # cache URL
+      print $cache; # overloaded
+
+      $html = $cache->fetch; # fetches via LWP::Simple
+
+      # functional way
+      use WWW::Cache::Google qw(url2google get_google_cache);
+      $cache_url  = url2google('http://www.yahoo.com/');
+      $cache_html = get_google_cache('http://www.yahoo.com');
+
+DESCRIPTION
+    WWW::Cache::Google provides an easy way conversion from an URL to Google
+    cache URL.
+
+AUTHOR
+    Tatsuhiko Miyagawa <miyagawa@bulknews.net>
+
+    This library is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
+
+SEE ALSO
+    the URI manpage, the URI::Escape manpage, the LWP::Simple manpage,
+    http;//www.google.com/
+
