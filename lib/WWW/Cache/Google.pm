@@ -97,7 +97,7 @@ WWW::Cache::Google - URI class for Google cache
 
   # functional way
   use WWW::Cache::Google qw(url2google get_google_cache);
-  $cache_url = url2google('http://www.yahoo.com/');
+  $cache_url  = url2google('http://www.yahoo.com/');
   $cache_html = get_google_cache('http://www.yahoo.com');
 
 =head1 DESCRIPTION
