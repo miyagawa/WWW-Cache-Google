@@ -55,6 +55,8 @@ Tatsuhiko Miyagawa <miyagawa@bulknews.net>
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
 
+It comes WIHTOUT WARRANTY OF ANY KIND. 
+
 =head1 SEE ALSO
 
 L<WWW::Cache::Google>.
