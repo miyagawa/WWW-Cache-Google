@@ -1,26 +1,11 @@
 package WWW::Cache::Google;
 
 use strict;
-use vars qw($VERSION @ISA @EXPORT_OK);
+use vars qw($VERSION);
 $VERSION = '0.02';
-
-require Exporter;
-@ISA = qw(Exporter);
-@EXPORT_OK = qw(url2google get_google_cache);
 
 use URI;
 use URI::Escape;
-
-# functional wrapper
-sub url2google {
-    my $url = shift;
-    return __PACKAGE__->new($url)->as_string;
-}
-
-sub get_google_cache {
-    my $url = shift;
-    return __PACKAGE__->new($url)->fetch;
-}
 
 sub cache_base {
     return 'http://www.google.com/search?q=cache:%s';
@@ -82,16 +67,10 @@ WWW::Cache::Google - URI class for Google cache
 
   use WWW::Cache::Google;
 
-  # OO decorator way
   $cache = WWW::Cache::Google->new('http://www.yahoo.com/');
 
   $url  = $cache->as_string;	# cache URL
   $html = $cache->fetch; 	# fetches via LWP::Simple
-
-  # functional way
-  use WWW::Cache::Google qw(url2google get_google_cache);
-  $cache_url  = url2google('http://www.yahoo.com/');
-  $cache_html = get_google_cache('http://www.yahoo.com');
 
 =head1 DESCRIPTION
 
@@ -118,7 +97,7 @@ returns Google cache URL as URI instance.
 
 =item $html = $cache->fetch;
 
-gets HTML contents of Google cache. Requires L<LWP::Simple>.
+gets HTML contents of Google cache. Requires LWP::Simple.
 
 =item $url_str = $cache->as_string;
 
@@ -126,30 +105,6 @@ returns Google cache's URL as string. Every method defined in URI
 class is autoloaded through $cache->cache. See L<URI> for details.
 
 =back
-
-=head1 FUNCTIONS
-
-Following functions are provided for non-OO programmers, or one-liners.
-
-=over 4
-
-=item $cache_url = url2google($url);
-
-converts URL to Google cache URL. Same as
-
-  $cache_url = WWW::Cache::Google->new($url)->as_string;
-
-
-=item $cache_html = get_google_cache($url);
-
-returns HTML contents of Google cache. Same as:
-
-  $cache_html = WWW::Cache::Google->new($url)->fetch;
-
-=back
-
-These functions are not exported by default.
-
 
 =head1 AUTHOR
 
