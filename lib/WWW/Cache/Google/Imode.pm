@@ -4,6 +4,7 @@ use strict;
 use vars qw($VERSION);
 $VERSION = '0.01';
 
+require WWW::Cache::Google;
 use base qw(WWW::Cache::Google);
 
 sub cache_base {
