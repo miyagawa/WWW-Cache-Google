@@ -2,7 +2,7 @@ package WWW::Cache::Google;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = 0.03;
+$VERSION = 0.04;
 
 use URI;
 use URI::Escape;
@@ -81,6 +81,15 @@ Oops, 404 Not Found. But wait ... there might be a google cache!
 WWW::Cache::Google provides an easy way conversion from an URL to
 Google cache URL.
 
+If all you want is only to get cache B<content>, consider using Google
+Web APIs at http://www.google.com/apis/index.html
+
+  $html = SOAP::Lite
+      ->uri('urn:GoogleSearch')
+      ->proxy('http://api.google.com/search/beta2') # may change
+      ->doGetCachedPage($GoogleKey, 'http://cpan.org/')
+      ->result;
+
 =head1 METHODS
 
 =over 4
@@ -115,10 +124,11 @@ Tatsuhiko Miyagawa <miyagawa@bulknews.net>
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
 
-It comes WITHOUT WARRANTY OF ANY KIND. 
+It comes WITHOUT WARRANTY OF ANY KIND.
 
 =head1 SEE ALSO
 
-L<WWW::Cache::Google::Imode>, L<URI>, L<URI::Escape>, L<LWP::Simple>, http;//www.google.com/
+L<WWW::Cache::Google::Imode>, L<URI>, L<URI::Escape>, L<LWP::Simple>,
+http;//www.google.com/ http://www.google.com/apis/index.html
 
 =cut

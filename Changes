@@ -1,5 +1,8 @@
 Revision history for Perl extension WWW::Cache::Google.
 
+0.04  Fri Apr 12 21:36:07 JST 2002
+	- Added documentation for Google APIs
+
 0.03  Sun Mar 24 20:30:28 JST 2002
 	- Fixed problem with AUTOLOAD and DESTROY
 	  (Thanks to Jonathan Leto <jonathan@leto.net>)
