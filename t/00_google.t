@@ -4,7 +4,6 @@ BEGIN { plan tests => 4 }
 
 use WWW::Cache::Google;
 use URI;
-use Data::Dumper;
 
 my %test = qw(
 	http://www.yahoo.com/

@@ -1,5 +1,9 @@
 Revision history for Perl extension WWW::Cache::Google.
 
+0.02  Mon Jun 25 19:34:26 JST 2001
+	* Added WWW::Cache::Google::Imode
+	- removed functions
+
 0.01  Fri May 18 20:11:49 2001
 	- original version; created by h2xs 1.19
 

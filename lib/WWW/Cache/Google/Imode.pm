@@ -10,6 +10,14 @@ sub cache_base {
     return 'http://wmlproxy.google.com/chtmltrans/p=i/s=0/u=%s/c=0';
 }
 
+sub _cache_param {
+    my $self = shift;
+    my $param = $self->SUPER::_cache_param();
+    $param =~ tr/%/@/;
+    return $param;
+}
+
+
 1;
 __END__
 
