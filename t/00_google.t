@@ -1,8 +1,8 @@
 use strict;
 use Test;
-BEGIN { plan tests => 6 }
+BEGIN { plan tests => 4 }
 
-use WWW::Cache::Google qw(url2google);
+use WWW::Cache::Google;
 use URI;
 use Data::Dumper;
 
@@ -18,7 +18,6 @@ while (my($orig, $cache) = each %test) {
 	ok($c->as_string, $cache);
 	my $cu = WWW::Cache::Google->new(URI->new($orig));
 	ok($cu->as_string, $cache);
-	ok(url2google($orig), $cache);
 }
 
 
